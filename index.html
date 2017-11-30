@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>singlefiledemo</title>
+</head>
+
+<body>
+  <div id="app"></div>
+  <!-- built files will be auto injected -->
+  <script type="text/javascript">
+    // 计算html的font-size
+    (function () {
+      // 重新计算当前文档的根元素<html>的字体大小
+      function resizeBaseFontSize() {
+        // document.documentElement获取当前文档的根元素<html>
+        var html = document.documentElement;
+        // html.clientWidth获取浏览器的宽度
+        var deviceWidth = html.clientWidth;
+        if (deviceWidth > 640) {
+          deviceWidth = 640;
+        }
+        html.style.fontSize = deviceWidth / 7.5 + "px";
+      }
+      resizeBaseFontSize();
+      // 浏览器的大小改变时，重新计算<html>元素的字体大小
+      window.addEventListener("resize", resizeBaseFontSize, false);
+      // 控制手机横向时，重新计算<html>元素的字体大小
+      window.addEventListener("orientationchange", resizeBaseFontSize, false);
+    })();
+  </script>
+</body>
+
+</html>

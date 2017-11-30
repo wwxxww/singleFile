@@ -1,0 +1,6 @@
+1. win + r打开cmd
+2. cd desktop
+3. vue init webpack singlefiledemo
+4. cd singlefiledemo
+5. cnpm install  (出错了怎么办？去singlefiledemo文件夹把node_modules文件夹删除掉，重新执行命令cnpm install,直到安装成功为至)
+6. npm run dev
